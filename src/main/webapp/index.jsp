@@ -24,7 +24,7 @@
             padding-bottom: 10px;
             margin-top: 20px;
             margin-bottom: 10px;
-            margin-left: 10%;
+            margin-left: 3%;
             display: inline-block;
         }
         #area{
@@ -43,6 +43,14 @@
             margin-left: 3%;
             display: inline-block;
         }
+        #address{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 3%;
+            display: inline-block;
+        }
         .inputsearch{
             padding-top: 10px;
             padding-bottom: 10px;
@@ -51,6 +59,7 @@
             margin-left: 3%;
             display: inline-block;
             padding-left:6px;
+            width: 150px;
         }
         .facebook-icon {
             display: inline-block;
@@ -327,7 +336,20 @@
         <option> >1200 </option>
     </select>
 
-    <input name="inputsearch" class="inputsearch" type="search" style="width: 20%;" placeholder="Search">
+    <select name="address" style="width: 15%;" id="address" class="block w-full px-4 py-2 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Address</option>
+        <option>123 Main St</option>
+        <option>456 Elm St</option>
+        <option>789 Oak St</option>
+        <option>101 Pine St</option>
+        <option>202 Maple St</option>
+        <option>303 Cedar St</option>
+        <option>404 Birch St</option>
+        <option>505 Spruce St</option>
+        <option>606 Walnut St</option>
+    </select>
+
+    <input name="inputsearch" class="inputsearch" type="search" placeholder="Search">
 
     <button style="display: inline-block; margin-left:3%; margin-top:-5px" type="submit" class="btn btn-secondary">Search</button>
 </form>
@@ -371,38 +393,38 @@
         </main>
 
         <!-- Cac trang tiep theo -->
-        <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6" style="margin-bottom:0;">
-            <div class="flex flex-1 justify-between sm:hidden">
-                <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>
-                <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>
-            </div>
-            <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between" style="display: flex; justify-content:center">
+<%--        <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6" style="margin-bottom:0;">--%>
+<%--            <div class="flex flex-1 justify-between sm:hidden">--%>
+<%--                <a href="#" class="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Previous</a>--%>
+<%--                <a href="#" class="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">Next</a>--%>
+<%--            </div>--%>
+<%--            <div class="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between" style="display: flex; justify-content:center">--%>
 
-                <div>
-                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
-                        <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-                            <span class="sr-only">Previous</span>
-                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                        <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>
-                        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>
-                        <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>
-                        <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>
-                        <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>
-                        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>
-                        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>
-                        <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">
-                            <span class="sr-only">Next</span>
-                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-        </div>
+<%--                <div>--%>
+<%--                    <nav class="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">--%>
+<%--                        <a href="#" class="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">--%>
+<%--                            <span class="sr-only">Previous</span>--%>
+<%--                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">--%>
+<%--                                <path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"></path>--%>
+<%--                            </svg>--%>
+<%--                        </a>--%>
+<%--                        <a href="#" aria-current="page" class="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">1</a>--%>
+<%--                        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">2</a>--%>
+<%--                        <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">3</a>--%>
+<%--                        <span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">...</span>--%>
+<%--                        <a href="#" class="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex">8</a>--%>
+<%--                        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">9</a>--%>
+<%--                        <a href="#" class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">10</a>--%>
+<%--                        <a href="#" class="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0">--%>
+<%--                            <span class="sr-only">Next</span>--%>
+<%--                            <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">--%>
+<%--                                <path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"></path>--%>
+<%--                            </svg>--%>
+<%--                        </a>--%>
+<%--                    </nav>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
     </div>
 
     <div class="KhoiPhai" style="margin-top: 50px; padding:20px; flex:20;">
@@ -556,7 +578,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8" style="margin-top: -5px; background-color:#fff; z-index:0; border:1px solid #c6c3c3; border-radius:20px;">
         <div style="text-align: center;">
             <p style="color: #f43d3d; font-size:25px; margin-top:-40px"><b>Thông tin liên hệ</b></p>
-            <a style="margin-right: 18px;" href="https://www.facebook.com" target="_blank" class="facebook-icon"></a> <a style="margin-right: 18px;" href="https://www.facebook.com" target="_blank" class="insta-icon"></a> <a href="https://www.facebook.com" target="_blank" class="zalo-icon"></a>
+            <a style="margin-right: 18px;" href="https://www.facebook.com" target="_blank" class="facebook-icon"></a> <a style="margin-right: 18px;" href="https://www.instagram.com/" target="_blank" class="insta-icon"></a> <a href="https://zaloweb.me/" target="_blank" class="zalo-icon"></a>
             <p style="color: rgb(153, 153, 153);">Địa chỉ: Yên Nghĩa, Hà Đông, Hà Nội</p>
         </div>
     </div>

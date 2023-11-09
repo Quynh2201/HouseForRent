@@ -7,12 +7,13 @@
     String area = request.getParameter("area");
     String price = request.getParameter("price");
     String inputsearch = request.getParameter("inputsearch");
+    String address = request.getParameter("address");
     SearchServlet searchServlet = new SearchServlet();
-    List<Room> roomListSearch = searchServlet.getRoomBySearch(local, area, price, inputsearch);
+    List<Room> roomListSearch = searchServlet.getRoomBySearch(local, area, price, inputsearch, address);
 %>
 <html>
 <head>
-    <title>Dashboard</title>
+    <title>Dashboard<%=address%>}</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
@@ -24,7 +25,7 @@
             padding-bottom: 10px;
             margin-top: 20px;
             margin-bottom: 10px;
-            margin-left: 10%;
+            margin-left: 3%;
             display: inline-block;
         }
         #area{
@@ -51,6 +52,15 @@
             margin-left: 3%;
             display: inline-block;
             padding-left:6px;
+            width: 150px;
+        }
+        #address{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: 3%;
+            display: inline-block;
         }
         .facebook-icon {
             display: inline-block;
@@ -162,7 +172,21 @@
         <option> >1200 </option>
     </select>
 
-    <input name="inputsearch" class="inputsearch" type="search" style="width: 20%;" placeholder="Search">
+    <select name="address" style="width: 15%;" id="address" class="block w-full px-4 py-2 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected>Address</option>
+        <option>123 Main St</option>
+        <option>456 Elm St</option>
+        <option>789 Oak St</option>
+        <option>101 Pine St</option>
+        <option>202 Maple St</option>
+        <option>303 Cedar St</option>
+        <option>404 Birch St</option>
+        <option>505 Spruce St</option>
+        <option>606 Walnut St</option>
+    </select>
+
+
+    <input name="inputsearch" class="inputsearch" type="search" placeholder="Search">
 
     <button style="display: inline-block; margin-left:3%; margin-top:-5px" type="submit" class="btn btn-secondary">Search</button>
 </form>
@@ -237,7 +261,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8" style="margin-top: -5px; background-color:#fff; z-index:0; border:1px solid #c6c3c3; border-radius:20px;">
         <div style="text-align: center;">
             <p style="color: #f43d3d; font-size:25px; margin-top:-40px"><b>Thông tin liên hệ</b></p>
-            <a style="margin-right: 18px;" href="https://www.facebook.com" target="_blank" class="facebook-icon"></a> <a style="margin-right: 18px;" href="https://www.facebook.com" target="_blank" class="insta-icon"></a> <a href="https://www.facebook.com" target="_blank" class="zalo-icon"></a>
+            <a style="margin-right: 18px;" href="https://www.facebook.com" target="_blank" class="facebook-icon"></a> <a style="margin-right: 18px;" href="https://www.instagram.com/" target="_blank" class="insta-icon"></a> <a href="https://zaloweb.me/" target="_blank" class="zalo-icon"></a>
             <p style="color: rgb(153, 153, 153);">Địa chỉ: Yên Nghĩa, Hà Đông, Hà Nội</p>
         </div>
     </div>
