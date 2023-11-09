@@ -303,8 +303,8 @@
 <form class="bg-white shadow" style="position: fixed; width:100%; top:60px; z-index: 1;" method="post" action="roomSearch.jsp">
     <!-- <label for="large" class="block mb-2 text-base font-medium text-gray-900 dark:text-white">Large select</label> -->
     <select name="local" style="width: 15%;" id="local" class="block w-full px-4 py-2 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option selected>Local</option>
-        <option value="NewYork">NewYork</option>
+        <option selected>Address</option>
+        <option value="NewYork">New York</option>
         <option value="Los Angeles">Los Angeles</option>
         <option value="Chicago">Chicago</option>
         <option value="San Francisco">San Francisco</option>
@@ -327,7 +327,7 @@
     </select>
 
     <select name="price" style="width: 15%;" id="price" class="block w-full px-4 py-2 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option selected>Prices($)</option>
+        <option selected>Price</option>
         <option>100-250</option>
         <option>250-500</option>
         <option>500-700</option>
@@ -365,32 +365,30 @@
                              <div class="row">
                                 <div class="col-md-3">
                                     <div class="card">
-                                        <a href="inforHome.jsp?roomid=<%=room.getID()%>"><img style="max-width: 100%;" src="img/anh2.jpg" alt=""></a>
+                                        <a href="inforHome.jsp?roomid=<%=room.getID()%>"><img style="max-width: 100%;" src="getRoomImage?roomID=<%=room.getID()%>" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="card" style="border: 0;">
                                         <b><a style="text-decoration: none; color:black;" href="inforHome.jsp?roomid=<%=room.getID()%>"><%= room.getHeading() %></a></b>
                                         <div>
-                                            <p style="color: brown; display:inline-block;"><b><%=room.getPrice()%>$</b></p>
+                                            <p style="color: brown; display:inline-block;"><b><%=room.getPrice()%>$/month</b></p>
                                             <p style="display: inline-block; margin-left: 4%;"><%=room.getArea()%></p>
-                                            <p style="display: inline-block; margin-left: 4%;">Address: <%= room.getAddress() %></p>
+                                            <p style="display: inline-block; margin-left: 4%;"><%= room.getAddress() %></p>
                                         </div>
                                         <p style="color: rgb(122, 121, 120); font-size: 12px;"><%= room.getDescription() %></p>
-                                        <img style="display: inline-block;" src="" alt=""> <p style="display: inline-block;"></p>
                                     </div>
                                 </div>
                              </div>
                             <div style="height: 12px;"></div>
                             <hr>
                             <div style="height: 12px;"></div>
-
                            <% }
                         }
                     %>
-
             </div>
         </main>
+<<<<<<< HEAD
 
         <!-- Cac trang tiep theo -->
 <%--        <div class="flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6" style="margin-bottom:0;">--%>
@@ -426,6 +424,9 @@
 <%--            </div>--%>
 <%--        </div>--%>
     </div>
+=======
+        </div>
+>>>>>>> 7e88cd6b05fd8584496ebf006cc3042dd847a789
 
     <div class="KhoiPhai" style="margin-top: 50px; padding:20px; flex:20;">
         <a href="https://shopee.vn/product/26947756/2820087763"><img style="max-width: 100%;" src="./img/anh1.png" alt=""></a>
@@ -521,7 +522,6 @@
                         <button><a style="color: #fff; text-decoration:none" href="https://dantri.com.vn/kinh-doanh/thu-duc-van-dong-mien-giam-tien-thue-tro-cho-cong-nhan-20210625180606920.htm">Read More</a></button>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

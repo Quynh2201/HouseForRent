@@ -13,9 +13,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TrangchuServlet{
-    private Connection connection = DBConnection.getConnection();
-    private PreparedStatement statement;
-    private ResultSet resultSet;
+    Connection connection = DBConnection.getConnection();
+    PreparedStatement statement;
+    ResultSet resultSet;
 
     public List<Room> getRoom() {
         List<Room> roomList = new ArrayList<>();
@@ -23,7 +23,7 @@ public class TrangchuServlet{
             String sql = "SELECT r.roomID, r.heading, r.price, r.area, r.address, r.description\n" +
                     "FROM room r\n" +
                     "JOIN user u ON r.userID = u.ID;";
-            statement = this.connection.prepareStatement(sql);
+            statement = connection.prepareStatement(sql);
             resultSet = statement.executeQuery();
             while (resultSet.next()) {
                 Room room = new Room();

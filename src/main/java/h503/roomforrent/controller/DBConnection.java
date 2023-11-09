@@ -1,4 +1,4 @@
-package com.example.housemanage.controller;
+package h503.roomforrent.controller;
 
 import java.sql.*;
 
@@ -13,7 +13,6 @@ public class DBConnection {
     public static Connection getConnection() {
         if (connection == null) {
             try {
-                // Tạo kết nối cơ sở dữ liệu ở đây
                 Class.forName("com.mysql.jdbc.Driver");
                 String url = "jdbc:mysql://localhost:3306/homeforrent";
                 connection = DriverManager.getConnection(url, "root", "jungkookdethuong22012003");
